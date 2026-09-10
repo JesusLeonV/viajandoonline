@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Términos y Condiciones | Viajando Online</title>
+  <meta name="description" content="Términos y condiciones, políticas de cancelación, reembolso y preguntas frecuentes de Viajando Online.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=2">
+  <style>
+    .terms-page { padding: 120px 0 80px; }
+    .terms-container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+    .terms-header { text-align: center; margin-bottom: 48px; }
+    .terms-header h1 { font-size: clamp(28px, 4vw, 40px); font-weight: 800; color: var(--text); margin-bottom: 8px; }
+    .terms-header h1 span { color: var(--primary); }
+    .terms-header p { color: var(--text-light); font-size: 15px; }
+    .terms-updated { font-size: 12px; color: var(--text-muted); margin-top: 8px; }
+
+    .terms-nav { background: var(--white); border-radius: var(--radius); padding: 20px 28px; margin-bottom: 32px; box-shadow: var(--shadow); position: sticky; top: 80px; z-index: 10; }
+    .terms-nav h3 { font-size: 14px; font-weight: 700; margin-bottom: 12px; color: var(--text); }
+    .terms-nav-list { display: flex; flex-wrap: wrap; gap: 8px; }
+    .terms-nav-list a {
+      font-size: 13px; font-weight: 500; color: var(--primary);
+      padding: 6px 14px; border-radius: 50px; border: 1px solid var(--border);
+      transition: all var(--transition);
+    }
+    .terms-nav-list a:hover { background: var(--primary); color: white; border-color: var(--primary); }
+
+    .terms-section { background: var(--white); border-radius: var(--radius); padding: 32px; margin-bottom: 24px; box-shadow: var(--shadow); }
+    .terms-section h2 { font-size: 22px; font-weight: 700; color: var(--text); margin-bottom: 16px; padding-bottom: 12px; border-bottom: 2px solid var(--primary-50); }
+    .terms-section h3 { font-size: 17px; font-weight: 700; color: var(--text); margin: 20px 0 10px; }
+    .terms-section p, .terms-section li { font-size: 14px; color: var(--text-light); line-height: 1.8; }
+    .terms-section ul, .terms-section ol { padding-left: 24px; margin: 8px 0 16px; }
+    .terms-section li { margin-bottom: 6px; }
+    .terms-section strong { color: var(--text); }
+
+    .payment-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; margin: 16px 0; }
+    .payment-card {
+      background: var(--primary-50); border: 1px solid var(--border);
+      padding: 16px; border-radius: var(--radius-sm); text-align: center;
+    }
+    .payment-card .icon { font-size: 28px; margin-bottom: 6px; }
+    .payment-card .label { font-size: 13px; font-weight: 600; color: var(--text); }
+
+    .faq-item { border: 1px solid var(--border); border-radius: var(--radius-sm); margin-bottom: 8px; overflow: hidden; }
+    .faq-question {
+      width: 100%; background: var(--bg); border: none; padding: 14px 20px;
+      text-align: left; font-size: 14px; font-weight: 600; color: var(--text);
+      cursor: pointer; display: flex; justify-content: space-between; align-items: center;
+      font-family: var(--font); transition: background var(--transition);
+    }
+    .faq-question:hover { background: var(--primary-50); }
+    .faq-question .arrow { font-size: 12px; transition: transform 0.3s; }
+    .faq-item.open .faq-question .arrow { transform: rotate(180deg); }
+    .faq-answer { padding: 0 20px; max-height: 0; overflow: hidden; transition: max-height 0.3s, padding 0.3s; }
+    .faq-item.open .faq-answer { padding: 0 20px 16px; max-height: 500px; }
+    .faq-answer p { font-size: 14px; color: var(--text-light); line-height: 1.7; }
+
+    .terms-contact { background: linear-gradient(135deg, #0c4a6e, #0f766e); color: white; text-align: center; padding: 40px; border-radius: var(--radius); margin-top: 32px; }
+    .terms-contact h3 { font-size: 20px; font-weight: 700; margin-bottom: 8px; }
+    .terms-contact p { font-size: 14px; opacity: 0.85; margin-bottom: 20px; }
+    .terms-contact a { color: #fcd34d; font-weight: 600; }
+
+    @media (max-width: 640px) {
+      .terms-section { padding: 24px 20px; }
+      .terms-nav { position: static; }
+      .payment-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header" role="banner">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">VO</div>
+        <span class="logo-text">Viajando <span>Online</span></span>
+      </a>
+      <button class="menu-toggle" aria-label="Menú" aria-expanded="false">☰</button>
+      <nav class="nav" role="navigation">
+        <a href="index.html">Tours</a>
+        <a href="terminos.html">Términos</a>
+        <a href="https://wa.me/56961470160?text=Hola%2C%20tengo%20una%20consulta" target="_blank" rel="noopener" class="btn-wsp">💬 WhatsApp</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="terms-page">
+    <div class="terms-container">
+
+      <!-- HEADER -->
+      <div class="terms-header">
+        <h1>Términos y <span>Condiciones</span></h1>
+        <p>Políticas, condiciones de uso y preguntas frecuentes de Viajando Online</p>
+        <p class="terms-updated">Última actualización: 24 de julio de 2026</p>
+      </div>
+
+      <!-- NAV -->
+      <div class="terms-nav">
+        <h3>Secciones</h3>
+        <div class="terms-nav-list">
+          <a href="#servicios">Servicios</a>
+          <a href="#reservas">Reservas</a>
+          <a href="#pagos">Medios de Pago</a>
+          <a href="#cancelaciones">Cancelaciones</a>
+          <a href="#reembolsos">Reembolsos</a>
+          <a href="#responsabilidad">Responsabilidad</a>
+          <a href="#politicas">Políticas</a>
+          <a href="#faq">Preguntas Frecuentes</a>
+        </div>
+      </div>
+
+      <!-- 1. SERVICIOS -->
+      <div class="terms-section" id="servicios">
+        <h2>1. Descripción de Servicios</h2>
+        <p>Viajando Online es una plataforma de información y reserva de tours turísticos en Iquique y el norte de Chile. A través de nuestro sitio web, los usuarios pueden explorar paquetes turísticos, consultar precios, horarios, incluye/no incluye y realizar reservas directamente a través de WhatsApp.</p>
+
+        <h3>1.1 Naturaleza del servicio</h3>
+        <ul>
+          <li>Viajando Online actúa como <strong>intermediario turístico</strong> entre el viajero y el operador turístico responsable de cada experiencia.</li>
+          <li>La información publicada (descripciones, imágenes, precios, horarios) es proporcionada por el operador y puede estar sujeta a cambios sin previo aviso.</li>
+          <li>Viajando Online no es el operador directo de los tours ofrecidos en esta plataforma.</li>
+        </ul>
+
+        <h3>1.2 Disponibilidad</h3>
+        <ul>
+          <li>Los tours están sujetos a disponibilidad de fechas y cupos.</li>
+          <li>La confirmación de una reserva depende de la disponibilidad del operador turístico.</li>
+          <li>En caso de no disponibilidad, se ofrecerá una fecha alternativa o el reembolso correspondiente.</li>
+        </ul>
+      </div>
+
+      <!-- 2. RESERVAS -->
+      <div class="terms-section" id="reservas">
+        <h2>2. Proceso de Reservas</h2>
+
+        <h3>2.1 Cómo reservar</h3>
+        <ol>
+          <li>El usuario selecciona el tour de su interés en la plataforma.</li>
+          <li>Hace clic en "Reservar ahora por WhatsApp" o contacta directamente a nuestro equipo.</li>
+          <li>Indica la fecha, cantidad de personas y datos de contacto.</li>
+          <li>Recibe confirmación de disponibilidad y instrucciones de pago.</li>
+          <li>Una vez confirmado el pago, se envía el comprobante de reserva.</li>
+        </ol>
+
+        <h3>2.2 Datos requeridos para la reserva</h3>
+        <ul>
+          <li>Nombre completo del titular de la reserva</li>
+          <li>Correo electrónico de contacto</li>
+          <li>Número de teléfono / WhatsApp</li>
+          <li>RUT o documento de identidad (según el tour)</li>
+          <li>Cantidad de personas y edades</li>
+          <li>Fecha y horario preferido</li>
+        </ul>
+
+        <h3>2.3 Confirmación</h3>
+        <ul>
+          <li>Una reserva se considera confirmada <strong>únicamente cuando el pago ha sido recibido y verificado</strong>.</li>
+          <li>Se enviará un comprobante de reserva por WhatsApp o correo electrónico con todos los detalles.</li>
+          <li>El usuario es responsable de revisar que todos los datos de la reserva sean correctos.</li>
+        </ul>
+      </div>
+
+      <!-- 3. MEDIOS DE PAGO -->
+      <div class="terms-section" id="pagos">
+        <h2>3. Medios de Pago</h2>
+        <p>Viajando Online acepta los siguientes medios de pago para la reserva de tours:</p>
+
+        <div class="payment-grid">
+          <div class="payment-card">
+            <div class="icon">💳</div>
+            <div class="label">Tarjeta de Débito</div>
+          </div>
+          <div class="payment-card">
+            <div class="icon">💳</div>
+            <div class="label">Tarjeta de Crédito</div>
+          </div>
+          <div class="payment-card">
+            <div class="icon">🏦</div>
+            <div class="label">Transferencia Bancaria</div>
+          </div>
+          <div class="payment-card">
+            <div class="icon">💵</div>
+            <div class="label">Efectivo</div>
+          </div>
+        </div>
+
+        <h3>3.1 Condiciones de pago</h3>
+        <ul>
+          <li><strong>Tarjeta de débito y crédito:</strong> Se procesa de forma inmediata a través de nuestra pasarela de pago segura.</li>
+          <li><strong>Transferencia bancaria:</strong> El usuario debe enviar el comprobante de transferencia por WhatsApp. La reserva se confirma una vez verificado el depósito (plazo máximo: 24 horas hábiles).</li>
+          <li><strong>Efectivo:</strong> El pago en efectivo se realiza directamente al operador turístico el día del tour, salvo que se indique lo contrario en la confirmación de reserva.</li>
+        </ul>
+
+        <h3>3.2 Moneda</h3>
+        <ul>
+          <li>Todos los precios están expresados en <strong>Pesos Chilenos (CLP)</strong>.</li>
+          <li>Los precios indicados son por persona, salvo que se especifique lo contrario.</li>
+        </ul>
+      </div>
+
+      <!-- 4. CANCELACIONES -->
+      <div class="terms-section" id="cancelaciones">
+        <h2>4. Políticas de Cancelación</h2>
+
+        <h3>4.1 Cancelación por parte del cliente</h3>
+        <ul>
+          <li><strong>Más de 48 horas antes del tour:</strong> Reembolso del 100% del monto pagado.</li>
+          <li><strong>Entre 24 y 48 horas antes del tour:</strong> Reembolso del 50% del monto pagado.</li>
+          <li><strong>Menos de 24 horas antes del tour:</strong> No procede reembolso.</li>
+          <li><strong>No presentarse (no-show):</strong> No procede reembolso.</li>
+        </ul>
+
+        <h3>4.2 Cancelación por parte del operador</h3>
+        <ul>
+          <li>En caso de cancelación por condiciones climáticas, seguridad o fuerza mayor, el operador ofrecerá una <strong>fecha alternativa o reembolso completo</strong>.</li>
+          <li>El operador se compromete a notificar con la mayor antelación posible.</li>
+        </ul>
+
+        <h3>4.3 Cambios de fecha</h3>
+        <ul>
+          <li>Los cambios de fecha están sujetos a disponibilidad y deben solicitarse con al menos <strong>48 horas de anticipación</strong>.</li>
+          <li>Solo se permite un cambio de fecha por reserva.</li>
+        </ul>
+      </div>
+
+      <!-- 5. REEMBOLSOS -->
+      <div class="terms-section" id="reembolsos">
+        <h2>5. Políticas de Reembolso</h2>
+        <ul>
+          <li>Los reembolsos se procesarán por el mismo medio de pago utilizado en la compra.</li>
+          <li><strong>Tarjeta de débito/crédito:</strong> El reembolso se reflejará en un plazo de 5 a 10 días hábiles.</li>
+          <li><strong>Transferencia bancaria:</strong> El reembolso se realizará a la cuenta bancaria indicada por el cliente dentro de 5 a 10 días hábiles.</li>
+          <li><strong>Efectivo:</strong> El reembolso se realizará en efectivo en punto de acuerdos o transferencia bancaria.</li>
+        </ul>
+
+        <h3>5.1 Excepciones</h3>
+        <ul>
+          <li>No se realizarán reembolsos por servicios parcialmente utilizados.</li>
+          <li>Los costos de gestión o comisiones bancarias no son reembolsables.</li>
+          <li>Las reservas con descuento especial o promocional tienen políticas de reembolso específicas que se indicarán al momento de la reserva.</li>
+        </ul>
+      </div>
+
+      <!-- 6. RESPONSABILIDAD -->
+      <div class="terms-section" id="responsabilidad">
+        <h2>6. Responsabilidad y Limitaciones</h2>
+
+        <h3>6.1 Responsabilidad de Viajando Online</h3>
+        <ul>
+          <li>Viajando Online se responsabiliza de la <strong>correcta transmisión de la información</strong> entre el cliente y el operador turístico.</li>
+          <li>No nos hacemos responsables por la calidad del servicio turístico prestado por el operador.</li>
+          <li>No nos hacemos responsables por incidentes, accidentes o pérdidas durante la ejecución del tour.</li>
+        </ul>
+
+        <h3>6.2 Responsabilidad del operador</h3>
+        <ul>
+          <li>El operador turístico es el responsable directo de la ejecución del tour, la seguridad de los participantes y el cumplimiento de los servicios descritos.</li>
+          <li>El operador cuenta con seguros de responsabilidad civil y accidentes personales.</li>
+        </ul>
+
+        <h3>6.3 Obligaciones del cliente</h3>
+        <ul>
+          <li>El cliente se compromete a llegar a hora y lugar indicado para el inicio del tour.</li>
+          <li>Seguir las instrucciones del guía y operador en todo momento.</li>
+          <li>Informar sobre condiciones médicas, alergias o limitaciones físicas antes del tour.</li>
+          <li>Portar identificación vigente y documentación requerida.</li>
+        </ul>
+      </div>
+
+      <!-- 7. POLÍTICAS -->
+      <div class="terms-section" id="politicas">
+        <h2>7. Políticas Generales</h2>
+
+        <h3>7.1 Privacidad</h3>
+        <p>Los datos personales proporcionados por el usuario serán utilizados exclusivamente para la gestión de reservas y comunicación relacionada con el servicio. No serán compartidos con terceros, salvo que sea necesario para la ejecución del tour (operador turístico).</p>
+
+        <h3>7.2 Modificaciones</h3>
+        <ul>
+          <li>Viajando Online se reserva el derecho de modificar estos términos y condiciones en cualquier momento.</li>
+          <li>Las modificaciones serán publicadas en esta página con la fecha de actualización.</li>
+          <li>Las reservas confirmadas se regirán por los términos vigentes al momento de la reserva.</li>
+        </ul>
+
+        <h3>7.3 Propiedad intelectual</h3>
+        <ul>
+          <li>Todo el contenido de este sitio web (textos, imágenes, diseños, logotipos) es propiedad de Viajando Online o de sus proveedores.</li>
+          <li>Queda prohibida su reproducción, distribución o uso sin autorización previa.</li>
+        </ul>
+
+        <h3>7.4 Ley aplicable</h3>
+        <p>Estos términos y condiciones se rigen por la legislación chilena. Cualquier controversia será sometida a los tribunales competentes de Iquique, Chile.</p>
+      </div>
+
+      <!-- 8. FAQ -->
+      <div class="terms-section" id="faq">
+        <h2>8. Preguntas Frecuentes</h2>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            ¿Cómo reservo un tour?
+            <span class="arrow">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p>Solo haz clic en "Reservar ahora por WhatsApp" en el tour que te interese. Nuestro equipo te atenderá, confirmará disponibilidad y te indicará los pasos para completar tu reserva.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            ¿Puedo cancelar mi reserva?
+            <span class="arrow">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p>Sí. Si cancelas con más de 48 horas de anticipación, recibes reembolso del 100%. Entre 24 y 48 horas, el 50%. Con menos de 24 horas no procede reembolso. Los cambios de fecha están sujetos a disponibilidad.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            ¿Qué medios de pago aceptan?
+            <span class="arrow">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p>Aceptamos tarjeta de débito, tarjeta de crédito, transferencia bancaria y efectivo. Estos son los únicos medios de pago disponibles.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            ¿Los precios incluyen impuestos?
+            <span class="arrow">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p>Sí, todos los precios indicados incluyen IVA y están expresados en Pesos Chilenos (CLP). Los precios son por persona, salvo que se indique lo contrario.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            ¿Qué pasa si llueve o hay mal clima?
+            <span class="arrow">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p>Si el operador cancela el tour por condiciones climáticas, se ofrecerá una fecha alternativa o reembolso completo. La decisión final es del operador turístico.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            ¿Necesito seguro de viaje?
+            <span class="arrow">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p>Algunos tours incluyen seguro de viaje y otros no. Revisa la sección "No incluye" en cada tour para verificar. Recomendamos contratar un seguro de viaje para mayor tranquilidad.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            ¿Hay descuento para grupos o familias?
+            <span class="arrow">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p>Sí, para tours al interior de Iquique ofrecemos descuentos especiales para familias o grupos de 5 o más personas. Consulta precios al reservar por WhatsApp.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            ¿Qué debo llevar al tour?
+            <span class="arrow">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p>Depende del tour, pero generalmente se recomienda: ropa cómoda, calzado adecuado, protector solar, gorro, botella de agua, documentos de identidad y medio de pago. Los detalles específicos se envían al confirmar la reserva.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            ¿Puedo reservar para menores de edad?
+            <span class="arrow">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p>Sí, los menores de edad pueden participar en los tours accompagnados de un adulto responsable. Algunos tours pueden tener restricciones de edad o peso. Consulta al reservar.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            ¿Cómo recibo mi comprobante de reserva?
+            <span class="arrow">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p>El comprobante de reserva se envía por WhatsApp o correo electrónico después de confirmar el pago. Incluye todos los detalles del tour: fecha, hora, lugar de encuentro, incluye/no incluye y datos de contacto del operador.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            ¿Qué pasa si llego tarde al tour?
+            <span class="arrow">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p>Es fundamental llegar a la hora y lugar indicados. Si llegas tarde, podrías perder el tour sin derecho a reembolso. Contacta al operador si prevés demora.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            ¿Puedo cambiar el nombre de la reserva?
+            <span class="arrow">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p>Sí, puedes cambiar el nombre del titular contactándonos por WhatsApp con al menos 24 horas de anticipación. Se verificará la identidad del nuevo titular.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CONTACTO -->
+      <div class="terms-contact">
+        <h3>¿Tienes más preguntas?</h3>
+        <p>Contáctanos por WhatsApp y te respondemos al instante</p>
+        <a href="https://wa.me/56961470160?text=Hola%2C%20tengo%20una%20consulta%20sobre%20t%C3%A9rminos%20y%20condiciones" target="_blank" rel="noopener">💬 WhatsApp: +56 9 6147 0160</a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Viajando Online</h4>
+          <p style="font-size:14px; line-height:1.7;">Descubre los mejores tours en Iquique y el norte de Chile. Reserva fácil, pago seguro.</p>
+        </div>
+        <div>
+          <h4>Tours</h4>
+          <ul>
+            <li><a href="index.html">Ver todos los tours</a></li>
+            <li><a href="index.html#destacados">Destacados</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="terminos.html">Términos y condiciones</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contacto</h4>
+          <ul>
+            <li><a href="https://wa.me/56961470160" target="_blank">WhatsApp</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 Viajando Online. Todos los derechos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    /* FAQ accordion */
+    document.querySelectorAll('.faq-question').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var item = this.parentElement;
+        var wasOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(function(i) { i.classList.remove('open'); });
+        if (!wasOpen) item.classList.add('open');
+      });
+    });
+
+    /* Header scroll */
+    var header = document.querySelector('.header');
+    window.addEventListener('scroll', function() {
+      header.classList.toggle('scrolled', window.scrollY > 20);
+    }, { passive: true });
+
+    /* Mobile menu */
+    var toggle = document.querySelector('.menu-toggle');
+    var nav = document.querySelector('.nav');
+    if (toggle && nav) {
+      toggle.addEventListener('click', function() {
+        var open = nav.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', open);
+        toggle.innerHTML = open ? '✕' : '☰';
+      });
+    }
+
+    /* Smooth scroll for nav links */
+    document.querySelectorAll('.terms-nav-list a').forEach(function(a) {
+      a.addEventListener('click', function(e) {
+        var target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es" prefix="og: https://ogp.me/ns#">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tours Iquique - Parapente, Salitreras, Laguna Roja | Viajando Online</title>
+  <meta name="description" content="Descubre Iquique con los mejores tours: city tour, salitreras, parapente, sandboard, laguna roja, termas y más. Reserva online con Viajando Online.">
+  <meta name="keywords" content="tours iquique, parapente iquique, sandboard, salitreras, laguna roja, city tour iquique, termas chusmiza, turismo iquique">
+  <meta name="author" content="Viajando Online">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Tours Iquique - Viajando Online">
+  <meta property="og:description" content="Descubre Iquique con los mejores tours: salitreras, parapente, sandboard, laguna roja y más.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://viajandoonline.cl">
+  <meta property="og:image" content="img/tours/salitreras.jpeg">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=11">
+  <link rel="preload" as="image" href="img/tours/salitreras.jpeg" fetchpriority="high">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header" role="banner">
+    <div class="container">
+      <a href="#" class="logo" aria-label="Viajando Online inicio">
+        <img src="img/logo/logo-whatsapp.jpeg" alt="Viajando Online" style="height:40px;width:auto;border-radius:8px;">
+        <span class="logo-text">Viajando <span>Online</span></span>
+      </a>
+      <button class="menu-toggle" aria-label="Menú de navegación" aria-expanded="false">☰</button>
+      <nav class="nav" role="navigation" aria-label="Navegación principal">
+        <a href="#tours">Tours</a>
+        <a href="#destacados">Destacados</a>
+        <a href="#porque">Por qué nosotros</a>
+        <a href="#testimonios">Testimonios</a>
+        <a href="https://wa.me/56961470160" target="_blank" rel="noopener" class="btn-wsp">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          Reservar ahora
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" role="region" aria-label="Hero principal">
+    <div class="hero-bg" style="background-image: url('img/tours/salitreras.jpeg');"></div>
+    <div class="container">
+      <div class="hero-content">
+        <span class="hero-badge">Iquique, Norte de Chile</span>
+        <h1>Descubre los <span>tesoros</span> del Desierto y el Mar</h1>
+        <p>Explora Iquique con los mejores tours: salitreras, lagunas altiplánicas, deportes de aventura y más. Vive experiencias únicas en el Norte de Chile.</p>
+        <div class="hero-buttons">
+          <a href="#tours" class="btn-primary">Ver todos los tours</a>
+          <a href="https://wa.me/56961470160" target="_blank" rel="noopener" class="btn-outline">WhatsApp</a>
+        </div>
+        <div class="stats">
+          <div class="stat-item"><span class="stat-number">5+</span><br><span class="stat-label">Años de experiencia</span></div>
+          <div class="stat-item"><span class="stat-number">14</span><br><span class="stat-label">Tours disponibles</span></div>
+          <div class="stat-item"><span class="stat-number">5.0</span><br><span class="stat-label">Calificación</span></div>
+          <div class="stat-item"><span class="stat-number">500+</span><br><span class="stat-label">Viajeros felices</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DESTACADOS -->
+  <section class="destacados-section" id="destacados" role="region" aria-label="Tours destacados">
+    <div class="container">
+      <div class="section-title">
+        <h2>Tours <span>Destacados</span></h2>
+        <p>Las experiencias más elegidas por nuestros viajeros en Iquique</p>
+      </div>
+      <div class="destacados-grid">
+        <a href="https://wa.me/56961470160?text=Hola%2C%20quiero%20reservar%20el%20Full%20Day%20Salitreras%20%E2%80%93%20Oasis%20de%20Pica" target="_blank" rel="noopener" class="destacado-card" style="background-image: url('img/tours/salitreras.jpeg');">
+          <div class="destacado-card-content">
+            <h3>Full Day Salitreras – Oasis de Pica</h3>
+            <div class="subtitle">Patrimonio UNESCO + Oasis</div>
+            <div class="price"><span class="label">desde</span> $75.000</div>
+          </div>
+        </a>
+        <a href="https://wa.me/56961470160?text=Hola%2C%20quiero%20reservar%20el%20Tour%20Laguna%20Roja" target="_blank" rel="noopener" class="destacado-card" style="background-image: url('img/tours/laguna-roja.jpeg');">
+          <div class="destacado-card-content">
+            <h3>Tour Laguna Roja</h3>
+            <div class="subtitle">La joya secreta del altiplano chileno</div>
+            <div class="price"><span class="label">desde</span> $150.000</div>
+          </div>
+        </a>
+        <a href="https://wa.me/56961470160?text=Hola%2C%20quiero%20reservar%20Parapente%20en%20Iquique" target="_blank" rel="noopener" class="destacado-card" style="background-image: url('img/tours/parapente.jpeg');">
+          <div class="destacado-card-content">
+            <h3>Parapente en Iquique</h3>
+            <div class="subtitle">Vuela sobre el Cerro Dragón y la costa</div>
+            <div class="price"><span class="label">desde</span> $60.000</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOURS -->
+  <section class="tours-section" id="tours" role="region" aria-label="Todos los tours">
+    <div class="container">
+      <div class="section-title">
+        <h2>Todos los <span>Tours</span> en Iquique</h2>
+        <p>Selecciona un tour para ver detalles completos del viaje, destinos, horarios y precios</p>
+      </div>
+      <div id="tours-grid" class="tours-grid"></div>
+    </div>
+  </section>
+
+  <!-- POR QUÉ NOSOTROS -->
+  <section class="features-section" id="porque" role="region" aria-label="Por qué reservar con nosotros">
+    <div class="container">
+      <div class="section-title">
+        <h2>¿Por qué <span>reservar</span> con nosotros?</h2>
+        <p>Garantizamos la mejor experiencia en el Norte de Chile</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon" aria-hidden="true">🏆</div>
+          <h3>Operadores Profesionales</h3>
+          <p>Seleccionamos los mejores guías y operadores locales certificados para asegurar una experiencia segura y auténtica.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon" aria-hidden="true">💯</div>
+          <h3>Mejor Precio Garantizado</h3>
+          <p>Te aseguramos el mejor precio del mercado. Reserva gratis y políticas flexibles de reprogramación y anulación.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon" aria-hidden="true">💬</div>
+          <h3>Atención Personalizada</h3>
+          <p>Expertos disponibles 24/7 vía WhatsApp para ayudarte en la reserva, resolver dudas y planificar tu viaje.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon" aria-hidden="true">📸</div>
+          <h3>Fotos y Video Incluidos</h3>
+          <p>Todos nuestros tours de aventura incluyen sesión de fotos y videos editados, enviados por link de descarga.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon" aria-hidden="true">🚐</div>
+          <h3>Traslado Incluido</h3>
+          <p>Recogemos y dejamos en tu alojamiento de Iquique. Viaja cómodamente en vehículos con aire acondicionado.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon" aria-hidden="true">🌿</div>
+          <h3>Turismo Sustentable</h3>
+          <p>Fomentamos el respeto por las comunidades indígenas y el cuidado del patrimonio cultural y natural de la región.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIOS + OPINIONES -->
+  <section class="testimonials-section" id="testimonios" role="region" aria-label="Testimonios de viajeros">
+    <div class="container">
+      <div class="section-title">
+        <h2>Lo que dicen <span>nuestros viajeros</span></h2>
+        <p>Opiniones reales de quienes ya vivieron la experiencia</p>
+      </div>
+
+      <!-- FORMULARIO DE OPINIONES -->
+      <div class="review-form-section" id="dejar-opinion">
+        <div class="review-form-wrapper">
+          <h3>Deja tu opinión</h3>
+          <p class="review-form-subtitle">¿Visitaste Iquique con nosotros? Cuéntanos tu experiencia</p>
+          <form class="review-main-form" id="main-review-form">
+            <div class="review-field">
+              <label for="main-review-name">Tu nombre</label>
+              <input type="text" id="main-review-name" placeholder="Ej: María González" maxlength="40" required>
+            </div>
+            <div class="review-field">
+              <label for="main-review-tour">Tour que visitaste</label>
+              <select id="main-review-tour" required>
+                <option value="">Selecciona el tour</option>
+                <option value="city-tour">City Tour Iquique</option>
+                <option value="salitreras-oasis">Salitreras & Oasis de Pica</option>
+                <option value="parque-isluga">Parque Nacional Volcán Isluga</option>
+                <option value="laguna-roja">Laguna Roja</option>
+                <option value="salar-huasco">Salar del Huasco</option>
+                <option value="huatacondo">Huatacondo</option>
+                <option value="termas-mamina">Tour Mamiña</option>
+                <option value="salitreras">Salitreras Humberstone</option>
+                <option value="pisagua">Tour Pisagua</option>
+                <option value="geoglifos">Geoglifos de Pintados</option>
+                <option value="termas-chusmiza">Termas Chusmiza</option>
+                <option value="sandboard">Sandboard</option>
+                <option value="parapente">Parapente</option>
+                <option value="buceo">Buceo</option>
+              </select>
+            </div>
+            <div class="review-field">
+              <label>Tu puntuación</label>
+              <div class="review-stars-input" id="main-review-stars">
+                <span class="star-btn" data-star="1">☆</span>
+                <span class="star-btn" data-star="2">☆</span>
+                <span class="star-btn" data-star="3">☆</span>
+                <span class="star-btn" data-star="4">☆</span>
+                <span class="star-btn" data-star="5">☆</span>
+              </div>
+            </div>
+            <div class="review-field">
+              <label for="main-review-text">Tu opinión</label>
+              <textarea id="main-review-text" placeholder="Cuéntanos cómo fue tu experiencia, qué te gustó más, si lo recomendarías..." maxlength="500" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="review-submit-btn">Enviar mi opinión</button>
+          </form>
+          <div id="main-review-success" style="display:none;" class="review-success-msg">
+            ¡Gracias por tu opinión! Tu reseña ayudará a otros viajeros.
+          </div>
+        </div>
+      </div>
+
+      <!-- OPINIONES EN GRID -->
+      <div class="testimonials-grid" id="user-reviews-list"></div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section" role="region" aria-label="Llamado a la acción">
+    <div class="container">
+      <h2>¿Listo para tu próxima <br>aventura en Iquique?</h2>
+      <p>Reserva hoy y asegura tu cupo. Paga en cuotas sin interés con transferencia o efectivo.</p>
+      <a href="https://wa.me/56961470160?text=Hola%2C%20quiero%20reservar%20un%20tour%20en%20Iquique" target="_blank" rel="noopener" class="btn-primary">
+        Reserva ahora por WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Viajando Online</h4>
+          <ul>
+            <li><a href="#tours">Tours en Iquique</a></li>
+            <li><a href="#destacados">Destacados</a></li>
+            <li><a href="#testimonios">Testimonios</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contacto</h4>
+          <ul>
+            <li><a href="https://wa.me/56961470160" target="_blank" rel="noopener">WhatsApp: +56 9 6147 0160</a></li>
+            <li><a href="mailto:contacto@viajandoonline.cl">Email: contacto@viajandoonline.cl</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Síguenos</h4>
+          <ul>
+            <li><a href="https://www.instagram.com/viajandoonline.cl" target="_blank" rel="noopener">Instagram</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>DESARROLLADO POR</h4>
+          <div style="width:32px;height:3px;background:#f59e0b;border-radius:2px;margin-bottom:16px;"></div>
+          <div style="font-size:16px;font-weight:700;color:#fff;margin-bottom:4px;">CloudSolutions</div>
+          <div style="font-size:13px;color:rgba(255,255,255,0.5);font-style:italic;margin-bottom:12px;">Soluciones web a medida</div>
+          <a href="https://cloudsolutions.cl/" target="_blank" rel="noopener" style="display:block;width:40px;height:40px;border-radius:8px;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,0.15);text-decoration:none;transition:all 0.3s ease;" onmouseover="this.style.background='rgba(6,182,212,0.2)';this.style.borderColor='rgba(6,182,212,0.4)'" onmouseout="this.style.background='rgba(255,255,255,0.08)';this.style.borderColor='rgba(255,255,255,0.15)'">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Viajando Online. Todos los derechos reservados.</p>
+        <a href="terminos.html">Términos y Condiciones</a>
+      </div>
+
+
+    </div>
+  </footer>
+
+  <script src="js/main.js?v=11"></script>
+</body>
+</html>

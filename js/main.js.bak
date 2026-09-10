@@ -1,0 +1,609 @@
+(function() {
+  'use strict';
+
+  /* =============================================
+     TOUR DATA
+     ============================================= */
+  const TOURS = [
+    {
+      id: 'city-tour',
+      title: 'City Tour Iquique + Navegación',
+      img: 'city-tour.jpeg',
+      category: 'City Tour',
+      price: 40000,
+      familyDiscount: false,
+      desc: 'Conoce los espectaculares paisajes de Iquique, sus playas, arquitectura y patrimonios. Recorre cada lugar turístico de la ciudad e incluye navegación por la costa.',
+      fullDesc: 'Recorrido por los sitios históricos más importantes de Iquique: Playa Cavancha, Mercado Centenario, Escuela Santa María, Catedral, Estación de Trenes, Museo Corbeta Esmeralda, Navegación Muelle de Pasajeros, Marinero Desconocido y ZOFRI.',
+      includes: ['Transporte', 'Guía Turístico', 'Protocolos Sanitarios'],
+      excludes: ['Alimentación y Bebidas', 'Ticket de Ingreso (CLP 3.000)', 'Seguro de Viaje'],
+      schedule: 'Mañana (AM) / Tarde (PM)',
+      destinations: ['Playa Cavancha', 'Mercado Centenario', 'Escuela Santa María', 'Catedral', 'Estación de Trenes', 'Museo Corbeta Esmeralda', 'Navegación Muelle de Pasajeros', 'Marinero Desconocido', 'ZOFRI'],
+      tickets: 'Ticket de Ingreso CLP 3.000'
+    },
+    {
+      id: 'salitreras-oasis',
+      title: 'Tour Salitreras & Oasis de Pica',
+      img: 'salitreras-oasis.jpeg',
+      category: 'Full Day',
+      price: 75000,
+      familyDiscount: true,
+      desc: 'Visita guiada a las ex oficinas salitreras que te transportarán a la época del auge del salitre. Luego visitaremos Pica, un hermoso oasis en pleno desierto.',
+      fullDesc: 'Imperdible de Tarapacá. Recorre las oficinas salitreras Humberstone y Santa Laura (Patrimonio UNESCO), donde conocerás la historia del "oro blanco". Continúa por la Pampa del Tamarugal, pasando por Pozo Almonte, el Santuario de La Tirana, y llega al Oasis de Pica con su cocha resbaladero. Finaliza en el Pueblo de Matilla y el Parque de los Dinosaurios.',
+      includes: ['Transporte', 'Guía Turístico', 'Alimentación (Almuerzo)', 'Protocolos Sanitarios'],
+      excludes: ['Bebidas', 'Ticket de Ingreso Salitreras (CLP 8.000)', 'Ticket de Ingreso Oasis Pica (CLP 7.000)'],
+      schedule: 'Salida 08:00 hrs · Retorno 19:30 hrs',
+      destinations: ['Oficinas Salitreras Humberstone y Santa Laura', 'Pozo Almonte', 'Pueblo de La Tirana', 'Oasis de Pica', 'Pueblo de Matilla', 'Parque de Dinosaurios'],
+      tickets: 'Salitreras CLP 8.000 + Oasis Pica CLP 7.000'
+    },
+    {
+      id: 'parque-isluga',
+      title: 'Tour Parque Nacional Volcán Isluga',
+      img: 'parque-isluga.jpeg',
+      category: 'Naturaleza',
+      price: 110000,
+      familyDiscount: true,
+      desc: 'En esta ruta podrás disfrutar y contemplar maravillosos paisajes únicos con variedad de fauna y flora, con su imponente cultura, artesanía y gastronomía.',
+      fullDesc: 'Desde Iquique hacia el norte, llegando al majestuoso Cerro Unita para observar el Gigante de Tarapacá. Continúa al Mirador de Chusmiza para aclimatarte a la altura. Luego visita el pueblo de Isluga, el Valle de la Felicidad y Cariquima.',
+      includes: ['Transporte', 'Guía Turístico', 'Alimentación (Desayuno y Almuerzo)', 'Protocolos Sanitarios'],
+      excludes: ['Bebidas', 'Ticket de Ingreso Termas (CLP 6.000)', 'Seguro de Viaje'],
+      schedule: 'Salida 05:30 hrs · Retorno 21:00 hrs',
+      destinations: ['Gigante de Tarapacá', 'Mirador de Chusmiza', 'Termas de Chusmiza', 'Pueblo de Isluga', 'Valle de la Felicidad', 'Cariquima'],
+      tickets: 'Ticket de Ingreso Termas CLP 6.000'
+    },
+    {
+      id: 'laguna-roja',
+      title: 'Tour Laguna Roja',
+      img: 'laguna-roja.jpeg',
+      category: 'Naturaleza',
+      price: 150000,
+      familyDiscount: true,
+      desc: 'Mágica y misteriosa Laguna Roja, única en Chile. Rodeada de historias sagradas, un lugar para recuperar energías.',
+      fullDesc: 'El secreto mejor guardado del norte de Chile. Salida desde Iquique rumbo a la cordillera altiplánica para visitar la Laguna Roja a 3.700 msnm, junto a las lagunas Verde y Amarilla.',
+      includes: ['Transporte', 'Guía Turístico', 'Alimentación (Almuerzo)', 'Protocolos Sanitarios'],
+      excludes: ['Bebidas', 'Ticket de Ingreso (CLP 3.000)', 'Seguro de Viaje'],
+      schedule: 'Salida 05:00 hrs · Retorno 21:00 hrs',
+      destinations: ['Camiña', 'Laguna Roja', 'Laguna Amarilla', 'Laguna Verde', 'Petroglifos de Chillayza'],
+      tickets: 'Ticket de Ingreso CLP 3.000'
+    },
+    {
+      id: 'salar-huasco',
+      title: 'Tour Parque Nacional Salar del Huasco',
+      img: 'salar-huasco.jpeg',
+      category: 'Naturaleza',
+      price: 95000,
+      familyDiscount: true,
+      desc: 'Disfruta de los increíbles paisajes del Salar del Huasco, donde podrás observar su fauna y aves como flamencos.',
+      fullDesc: 'Descubre el Parque Nacional Salar del Huasco, un humedal altoandino declarado Sitio Ramsar. Observa flamencos, taguas y otras aves.',
+      includes: ['Transporte', 'Guía Turístico', 'Alimentación (Almuerzo)', 'Protocolos Sanitarios'],
+      excludes: ['Bebidas', 'Ticket de Ingreso al Parque Nacional Salar del Huasco', 'Seguro de Viaje'],
+      schedule: 'Salida 07:00 hrs · Retorno 21:00 hrs',
+      destinations: ['Parque Nacional Salar del Huasco', 'Reserva Nacional del Tamarugal', 'Oasis de Pica'],
+      tickets: 'Ticket de Ingreso al Parque Nacional'
+    },
+    {
+      id: 'huatacondo',
+      title: 'Tour Huatacondo',
+      img: 'huatacondo.png',
+      category: 'Aventura',
+      price: 80000,
+      familyDiscount: true,
+      desc: 'Naturaleza, cultura andina y deportes de aventura. Aldea prehispánica, huellas de dinosaurios, cascadas petrificadas y dunas.',
+      fullDesc: 'El tour al pueblo de Huatacondo es una experiencia donde podrás disfrutar de la naturaleza, la cultura de los pueblos andinos y de los deportes de aventura.',
+      includes: ['Transporte', 'Guía Turístico', 'Alimentación (Desayuno y Almuerzo)', 'Equipo de Sandboard', 'Set Fotográfico', 'Protocolos Sanitarios'],
+      excludes: ['Bebidas', 'Seguro de Viaje'],
+      schedule: 'Salida 05:00 hrs · Retorno 20:00 hrs',
+      destinations: ['Aldea Prehispánica', 'Huellas de Dinosaurios', 'Cascadas Petrificadas', 'Pueblo de Huatacondo', 'Dunas de Chele'],
+      tickets: null
+    },
+    {
+      id: 'termas-mamina',
+      title: 'Tour Mamiña',
+      img: 'termas-mamina.jpeg',
+      category: 'Relax',
+      price: 80000,
+      familyDiscount: true,
+      desc: 'Aguas termales curativas y barros chinos en un pueblo de raíces quechuas a 2.800 msnm.',
+      fullDesc: 'Nos dirigiremos hacia el interior del altiplano, donde podremos apreciar cómo el imponente paisaje desértico da paso a hermosos escenarios andinos.',
+      includes: ['Transporte', 'Guía Turístico', 'Alimentación (Almuerzo)', 'Protocolos Sanitarios'],
+      excludes: ['Bebidas', 'Ticket de Ingreso Barros Chinos (CLP 5.000)', 'Ticket de Ingreso Termas Ipla (CLP 5.000)'],
+      schedule: 'Salida 08:00 hrs · Retorno 18:30 hrs',
+      destinations: ['Termas de Barros Chinos', 'Termas de Ipla', 'Recorrido por el Pueblo', 'Visita a Fábrica de Quesos'],
+      tickets: 'Barros Chinos CLP 5.000 + Ipla CLP 5.000'
+    },
+    {
+      id: 'salitreras',
+      title: 'Tour Salitreras Humberstone & Santa Laura',
+      img: 'salitreras.jpeg',
+      category: 'Patrimonio',
+      price: 50000,
+      familyDiscount: true,
+      desc: 'Visita guiada a las ex oficinas salitreras que te transportarán al siglo XIX.',
+      fullDesc: 'Recorrido por las oficinas salitreras Humberstone y Santa Laura, Patrimonio de la Humanidad por la UNESCO.',
+      includes: ['Transporte', 'Guía Turístico', 'Protocolos Sanitarios'],
+      excludes: ['Ticket de Ingreso Salitreras (CLP 8.000)', 'Seguro de Viaje'],
+      schedule: 'Salida 08:00 hrs · Retorno 14:00 hrs',
+      destinations: ['Oficina Salitrera Humberstone', 'Oficina Salitrera Santa Laura'],
+      tickets: 'Ticket de Ingreso CLP 8.000'
+    },
+    {
+      id: 'pisagua',
+      title: 'Tour Pisagua',
+      img: 'pisagua.webp',
+      category: 'Historia',
+      price: 70000,
+      familyDiscount: true,
+      desc: 'En esta ocasión visitaremos Pisagua, lugar histórico basado en la Guerra del Pacífico del mundo salitrero.',
+      fullDesc: 'Pisagua, el gran puerto salitrero. Visitaremos este lugar histórico basado en la Guerra del Pacífico y el mundo salitrero.',
+      includes: ['Transporte', 'Guía Turístico', 'Alimentación (Almuerzo)', 'Protocolos Sanitarios'],
+      excludes: ['Alimentación y Bebidas (A&B)', 'Seguro de Viaje'],
+      schedule: 'Salida 07:30 hrs · Retorno 19:00 hrs',
+      destinations: ['Batalla de Dolores', 'Recorrido Histórico', 'Monumento de Desembarcación', 'Cementerio de Pisagua'],
+      tickets: null
+    },
+    {
+      id: 'geoglifos',
+      title: 'Tour Geoglifos de Pintados',
+      img: 'geoglifos.jpeg',
+      category: 'Cultura',
+      price: 50000,
+      familyDiscount: true,
+      desc: 'Nos deleitaremos con el arte rupestre de nuestros antepasados, en la segunda concentración más grande del mundo de geoglifos.',
+      fullDesc: 'Arte rupestre de nuestros antepasados, en la segunda concentración más grande del mundo de geoglifos.',
+      includes: ['Transporte', 'Guía Turístico', 'Protocolos Sanitarios'],
+      excludes: ['Alimentación y Bebidas', 'Ticket de Ingreso a Geoglifos de Pintados', 'Seguro de Viaje'],
+      schedule: 'Salida 08:00 hrs · Retorno 14:00 hrs',
+      destinations: ['Geoglifos de Pintados', 'Salar Crespo de Pintados', 'Centro de Educación Ambiental', 'Pozo Almonte'],
+      tickets: 'Ticket de Ingreso Geoglifos'
+    },
+    {
+      id: 'termas-chusmiza',
+      title: 'Tour Termas Chusmiza & Gigante de Tarapacá',
+      img: 'termas-chusmiza.jpeg',
+      category: 'Relax',
+      price: 80000,
+      familyDiscount: true,
+      desc: 'Aguas termales mineralizadas a 3.200 msnm y el geoglifo más grande del mundo. Incluye trekking con llamas.',
+      fullDesc: 'Las termas se encuentran en la comuna de Huara a 3.200 msnm. Oasis termal con propiedades terapéuticas.',
+      includes: ['Transporte', 'Guía Turístico', 'Alimentación (Almuerzo)', 'Protocolos Sanitarios'],
+      excludes: ['Bebidas', 'Ticket de Ingreso Termas Chusmiza (CLP 6.000)', 'Seguro de Viaje'],
+      schedule: 'Salida 07:00 hrs · Retorno 19:00 hrs',
+      destinations: ['Mirador del Pueblo de Pachica', 'Pueblo de Chusmiza', 'Termas de Chusmiza', 'Gigante de Tarapacá', 'Trekking con Llamas'],
+      tickets: 'Termas CLP 6.000'
+    },
+    {
+      id: 'sandboard',
+      title: 'Sandboard Cerro Dragón',
+      img: 'sandboard.png',
+      category: 'Deporte',
+      price: 40000,
+      familyDiscount: false,
+      desc: 'Deporte de aventura en el Cerro Dragón, la duna de arena urbana más grande del mundo.',
+      fullDesc: 'Se realiza en el Cerro Dragón, la duna de arena urbana más grande del mundo. Tarde entre las 17:00 y 19:30 hrs.',
+      includes: ['Traslado al punto de inicio', 'Instructor', 'Equipo para la actividad', 'Equipo Fotográfico', 'Protocolos Sanitarios'],
+      excludes: ['Seguro de Viaje'],
+      schedule: 'Tarde a partir de las 15:00 hrs',
+      destinations: ['Cerro Dragón'],
+      tickets: null
+    },
+    {
+      id: 'parapente',
+      title: 'Parapente en Iquique',
+      img: 'parapente.jpeg',
+      category: 'Aventura',
+      price: 60000,
+      familyDiscount: false,
+      desc: 'Vuela sobre el Cerro Dragón y la costa de Iquique. Impresionantes vistas desde el aire.',
+      fullDesc: 'Actividad de aventura con vistas impresionantes de la costa y la ciudad desde el aire.',
+      includes: ['Traslado al punto de inicio', 'Instructor', 'Equipo para la actividad', 'Equipo Fotográfico', 'Protocolos Sanitarios'],
+      excludes: ['Seguro de Viaje'],
+      schedule: 'Mañana a partir de las 09:00 hrs',
+      destinations: ['Alto Hospicio'],
+      tickets: null
+    },
+    {
+      id: 'buceo',
+      title: 'Buceo en Iquique',
+      img: 'buceo.png',
+      category: 'Deporte',
+      price: 70000,
+      familyDiscount: false,
+      desc: 'Buceo en la costa de Iquique, condiciones ideales durante todo el año.',
+      fullDesc: 'Buceo en Playa Blanca, condiciones ideales durante todo el año. Horarios AM o PM.',
+      includes: ['Instructor', 'Equipo para la actividad', 'Equipo Fotográfico', 'Protocolos Sanitarios'],
+      excludes: ['Transporte', 'Seguro de Viaje'],
+      schedule: 'Mañana (AM) / Tarde (PM)',
+      destinations: ['Playa Blanca'],
+      tickets: null
+    }
+  ];
+
+  /* =============================================
+     REVIEWS — localStorage
+     Per-tour: reviews_{tourId}
+     Global: vo_all_reviews
+     ============================================= */
+  function getReviews(tourId) {
+    try {
+      return JSON.parse(localStorage.getItem('reviews_' + tourId)) || [];
+    } catch(e) { return []; }
+  }
+
+  function addReview(tourId, name, stars, text) {
+    var reviews = getReviews(tourId);
+    reviews.unshift({ name: name, stars: stars, text: text, date: new Date().toLocaleDateString('es-CL') });
+    localStorage.setItem('reviews_' + tourId, JSON.stringify(reviews));
+  }
+
+  function getAllReviews() {
+    try { return JSON.parse(localStorage.getItem('vo_all_reviews')) || []; }
+    catch(e) { return []; }
+  }
+
+  function addGlobalReview(tourId, tourName, name, stars, text) {
+    var reviews = getAllReviews();
+    reviews.unshift({ name: name, tour: tourId, tourName: tourName, stars: stars, text: text, date: new Date().toLocaleDateString('es-CL') });
+    localStorage.setItem('vo_all_reviews', JSON.stringify(reviews));
+  }
+
+  function addReviewSynced(tourId, tourName, name, stars, text) {
+    addReview(tourId, name, stars, text);
+    addGlobalReview(tourId, tourName, name, stars, text);
+  }
+
+  function renderStarsStr(count) {
+    var s = '';
+    for (var i = 0; i < 5; i++) s += i < count ? '★' : '☆';
+    return s;
+  }
+
+  function getAvgRating(tourId) {
+    var reviews = getReviews(tourId);
+    if (!reviews.length) return null;
+    var sum = reviews.reduce(function(a, r) { return a + r.stars; }, 0);
+    return (sum / reviews.length).toFixed(1);
+  }
+
+  /* =============================================
+     SEED REVIEWS
+     ============================================= */
+  function seedReviews() {
+    var VER = '5';
+    if (localStorage.getItem('vo_seed_version') === VER) return;
+
+    var tourNames = {};
+    TOURS.forEach(function(t) { tourNames[t.id] = t.title; });
+
+    var seeds = {
+      'salitreras-oasis': [
+        { name: 'María González', stars: 5, text: 'Increíble experiencia. El guía Polo es espectacular, conoce cada rincón de las salitreras. El almuerzo en Pica fue delicioso. 100% recomendado.', date: '15/06/2026' },
+        { name: 'Carlos Mendoza', stars: 5, text: 'Viajé con mi familia y fue perfecto. Los niños disfrutaron mucho. El oasis de Pica es un paraíso en el desierto.', date: '02/05/2026' },
+        { name: 'Ana Rodríguez', stars: 5, text: 'Tour Full Day completo, todo bien organizado. Las salitreras son impresionantes, sentí que viajé al siglo XIX.', date: '20/04/2026' }
+      ],
+      'laguna-roja': [
+        { name: 'Pedro Sánchez', stars: 5, text: 'La Laguna Roja es un lugar mágico. Las fotos no le hacen justicia. Imperdible.', date: '10/06/2026' },
+        { name: 'Laura Fernández', stars: 5, text: 'Larga pero vale cada minuto. Los paisajes del altiplano son espectaculares.', date: '28/05/2026' }
+      ],
+      'parapente': [
+        { name: 'Roberto Díaz', stars: 5, text: 'Volar sobre el Cerro Dragón y la costa de Iquique fue la mejor experiencia de mi vida.', date: '12/07/2026' },
+        { name: 'Sofía Vargas', stars: 5, text: 'Muy profesional el instructor. Me sentí segura todo el tiempo. 100% recomendado.', date: '01/07/2026' },
+        { name: 'Diego Morales', stars: 5, text: 'Segunda vez que vuelo con ellos. Siempre una experiencia increíble.', date: '18/06/2026' }
+      ],
+      'sandboard': [
+        { name: 'Valentina Rojas', stars: 5, text: 'El Cerro Dragón es increíble para sandboard. Super divertido.', date: '05/07/2026' },
+        { name: 'Martín López', stars: 4, text: 'Muy buena experiencia. La duna es enorme y la bajada es emocionante.', date: '22/06/2026' }
+      ],
+      'city-tour': [
+        { name: 'Isabella Castro', stars: 5, text: 'Perfecto para conocer Iquique en pocas horas. La navegación fue lo mejor.', date: '08/07/2026' },
+        { name: 'Andrés Figueroa', stars: 5, text: 'Excelente tour para llegar y conocer la ciudad. Recomendado para el primer día.', date: '25/06/2026' }
+      ],
+      'parque-isluga': [
+        { name: 'Carmen Silva', stars: 5, text: 'El Volcán Isluga es majestuoso. La experiencia con la cultura aymara fue muy emotiva.', date: '14/06/2026' }
+      ],
+      'termas-mamina': [
+        { name: 'Jorge Tapia', stars: 5, text: 'Las termas de Mamiña son increíbles. El barro chino es una experiencia única.', date: '30/06/2026' }
+      ],
+      'pisagua': [
+        { name: 'Lucía Herrera', stars: 5, text: 'Pisagua es historia viva. La gastronomía costera es espectacular.', date: '18/06/2026' }
+      ],
+      'buceo': [
+        { name: 'Felipe Reyes', stars: 5, text: 'El buceo en Playa Blanca es espectacular. La vida marina es impresionante.', date: '05/07/2026' }
+      ],
+      'geoglifos': [
+        { name: 'Gabriela Muñoz', stars: 5, text: 'Los Geoglifos de Pintados son fascinantes. Un tour cultural muy recomendado.', date: '10/06/2026' }
+      ],
+      'termas-chusmiza': [
+        { name: 'Ricardo Pizarro', stars: 5, text: 'Las termas de Chusmiza a 3.200 msnm son mágicas. El trekking con llamas fue único.', date: '22/06/2026' }
+      ],
+      'salar-huasco': [
+        { name: 'Patricia Vega', stars: 5, text: 'El Salar del Huasco es un paraíso. Vimos flamencos. Imperdible.', date: '01/07/2026' }
+      ],
+      'huatacondo': [
+        { name: 'Francisco Álvarez', stars: 5, text: 'Huatacondo es pura aventura. Las huellas de dinosaurios son algo único.', date: '15/06/2026' }
+      ],
+      'salitreras': [
+        { name: 'Daniela Contreras', stars: 5, text: 'Humberstone y Santa Laura son Patrimonio UNESCO por algo. Muy bien organizado.', date: '28/06/2026' }
+      ]
+    };
+
+    /* Write per-tour */
+    Object.keys(seeds).forEach(function(tourId) {
+      localStorage.setItem('reviews_' + tourId, JSON.stringify(seeds[tourId]));
+    });
+
+    /* Write global */
+    var all = [];
+    Object.keys(seeds).forEach(function(tourId) {
+      seeds[tourId].forEach(function(r) {
+        all.push({ name: r.name, tour: tourId, tourName: tourNames[tourId] || tourId, stars: r.stars, text: r.text, date: r.date });
+      });
+    });
+    localStorage.setItem('vo_all_reviews', JSON.stringify(all));
+    localStorage.setItem('vo_seed_version', VER);
+  }
+  seedReviews();
+
+  /* =============================================
+     RENDER TOUR CARDS
+     ============================================= */
+  var container = document.getElementById('tours-grid');
+  if (container) {
+    TOURS.forEach(function(t) {
+      var card = document.createElement('article');
+      card.className = 'tour-card';
+      card.setAttribute('data-tour-id', t.id);
+      var avg = getAvgRating(t.id);
+      var ratingHTML = avg ? '<span class="tour-card-rating">' + avg + ' ★</span>' : '';
+      var discountBadge = t.familyDiscount ? '<span class="tour-card-discount">👨‍👩‍👧‍👦 Descuento Familia</span>' : '';
+      card.innerHTML =
+        '<div class="tour-card-image" style="background-image: url(\'img/tours/' + t.img + '\');">' +
+          '<span class="tour-card-badge">' + t.category + '</span>' + ratingHTML + discountBadge +
+        '</div>' +
+        '<div class="tour-card-body">' +
+          '<span class="tour-card-category">Iquique</span>' +
+          '<h3>' + t.title + '</h3>' +
+          '<p class="tour-card-desc">' + t.desc + '</p>' +
+          '<div class="tour-card-footer">' +
+            '<span class="tour-price">$' + t.price.toLocaleString('es-CL') + ' <span>/ persona</span></span>' +
+            '<button class="btn-details" data-tour-id="' + t.id + '">Ver detalles</button>' +
+          '</div>' +
+        '</div>';
+      container.appendChild(card);
+    });
+  }
+
+  /* =============================================
+     MODAL — Solo opiniones del tour
+     ============================================= */
+  var modal = null;
+
+  function openModal(id) {
+    var t = TOURS.find(function(x) { return x.id === id; });
+    if (!t) return;
+
+    var reviews = getReviews(t.id);
+    var avg = getAvgRating(t.id);
+    var count = reviews.length;
+
+    var reviewsHtml = '';
+    reviews.forEach(function(r) {
+      var initials = r.name.split(' ').map(function(w){return w[0]}).join('').substring(0,2).toUpperCase();
+      reviewsHtml +=
+        '<blockquote class="testimonial-card">' +
+          '<div class="testimonial-stars">' + renderStarsStr(r.stars) + '</div>' +
+          '<p class="testimonial-text">"' + r.text + '"</p>' +
+          '<footer class="testimonial-author">' +
+            '<span class="testimonial-avatar">' + initials + '</span>' +
+            '<cite>' +
+              '<span class="testimonial-name">' + r.name + '</span>' +
+              '<span class="testimonial-date">' + r.date + '</span>' +
+            '</cite>' +
+          '</footer>' +
+        '</blockquote>';
+    });
+
+    modal.innerHTML =
+      '<div class="modal-backdrop"></div>' +
+      '<div class="modal-panel" role="dialog" aria-modal="true" aria-label="' + t.title + '">' +
+        '<button class="modal-close" aria-label="Cerrar">&times;</button>' +
+        '<div class="modal-image" style="background-image: url(\'img/tours/' + t.img + '\');">' +
+          '<span class="modal-category-badge">' + t.category + '</span>' +
+        '</div>' +
+        '<div class="modal-body">' +
+          '<h2 class="modal-title">' + t.title + '</h2>' +
+          '<p class="modal-desc">' + t.fullDesc + '</p>' +
+          '<div class="modal-price-row">' +
+            '<span class="modal-price-label">Precio</span>' +
+            '<span class="modal-price-value">$' + t.price.toLocaleString('es-CL') + ' <small>por persona</small></span>' +
+          '</div>' +
+          (t.familyDiscount ? '<div class="modal-family-discount"><span class="modal-icon">👨‍👩‍👧‍👦</span><div><strong>Descuento para familias de 5+ personas</strong><small>Consulta por WhatsApp</small></div></div>' : '') +
+          '<div class="modal-schedule"><span class="modal-icon">🕐</span> ' + t.schedule + '</div>' +
+          '<a href="https://wa.me/56961470160?text=Hola%2C%20quiero%20reservar%20' + encodeURIComponent(t.title) + '" target="_blank" rel="noopener" class="modal-wsp-btn">Reservar ahora por WhatsApp</a>' +
+          '<div class="reviews-section">' +
+            '<h3 class="reviews-title">Opiniones' + (avg ? ' <span class="reviews-avg">' + avg + ' ★ (' + count + ')</span>' : (count ? ' (' + count + ')' : '')) + '</h3>' +
+            '<div class="testimonials-grid">' +
+              (reviewsHtml || '<p class="reviews-empty">Sé el primero en dejar tu opinión sobre este tour</p>') +
+            '</div>' +
+          '</div>' +
+        '</div>' +
+      '</div>';
+
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+    setTimeout(function() { modal.classList.add('active'); }, 10);
+
+    modal.querySelector('.modal-close').addEventListener('click', closeModal);
+    modal.querySelector('.modal-backdrop').addEventListener('click', closeModal);
+    document.addEventListener('keydown', handleEsc);
+  }
+
+  function closeModal() {
+    if (!modal) return;
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+    setTimeout(function() { modal.style.display = 'none'; }, 300);
+    document.removeEventListener('keydown', handleEsc);
+  }
+
+  function handleEsc(e) { if (e.key === 'Escape') closeModal(); }
+
+  modal = document.createElement('div');
+  modal.className = 'modal-overlay';
+  modal.id = 'tour-modal';
+  document.body.appendChild(modal);
+
+  document.addEventListener('click', function(e) {
+    var btn = e.target.closest('.btn-details');
+    if (btn) {
+      e.preventDefault();
+      var id = btn.getAttribute('data-tour-id');
+      if (id) openModal(id);
+    }
+  });
+
+  /* =============================================
+     HEADER + MOBILE MENU + SMOOTH SCROLL
+     ============================================= */
+  var header = document.querySelector('.header');
+  window.addEventListener('scroll', function() {
+    header.classList.toggle('scrolled', window.scrollY > 20);
+  }, { passive: true });
+
+  var toggle = document.querySelector('.menu-toggle');
+  var nav = document.querySelector('.nav');
+  if (toggle && nav) {
+    toggle.addEventListener('click', function() {
+      var open = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+      toggle.innerHTML = open ? '✕' : '☰';
+    });
+    nav.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        nav.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.innerHTML = '☰';
+      });
+    });
+    document.addEventListener('click', function(e) {
+      if (!header.contains(e.target) && nav.classList.contains('open')) {
+        nav.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.innerHTML = '☰';
+      }
+    });
+  }
+
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+    anchor.addEventListener('click', function(e) {
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    });
+  });
+
+  /* =============================================
+     MAIN PAGE — RENDER REVIEWS GRID
+     ============================================= */
+  var REVIEWS_VISIBLE = 3;
+  var allReviewsExpanded = false;
+
+  function buildReviewCard(r) {
+    var initials = r.name.split(' ').map(function(w){return w[0]}).join('').substring(0,2).toUpperCase();
+    return '<blockquote class="testimonial-card">' +
+      '<div class="testimonial-stars">' + renderStarsStr(r.stars) + '</div>' +
+      '<p class="testimonial-text">"' + r.text + '"</p>' +
+      '<footer class="testimonial-author">' +
+        '<span class="testimonial-avatar">' + initials + '</span>' +
+        '<cite>' +
+          '<span class="testimonial-name">' + r.name + '</span>' +
+          '<span class="testimonial-date">' + r.date + ' · ' + r.tourName + '</span>' +
+        '</cite>' +
+      '</footer>' +
+    '</blockquote>';
+  }
+
+  function renderUserReviews() {
+    var list = document.getElementById('user-reviews-list');
+    if (!list) return;
+    var reviews = getAllReviews();
+    if (!reviews.length) { list.innerHTML = '<p class="reviews-empty">Sé el primero en dejar tu opinión</p>'; return; }
+    var html = '';
+    var limit = allReviewsExpanded ? reviews.length : Math.min(REVIEWS_VISIBLE, reviews.length);
+    for (var i = 0; i < limit; i++) html += buildReviewCard(reviews[i]);
+    if (reviews.length > REVIEWS_VISIBLE) {
+      html += '<div class="reviews-show-more">' +
+        '<button class="btn-show-more" id="btn-show-more-reviews">' +
+          (allReviewsExpanded ? 'Mostrar menos' : 'Ver todas las opiniones (' + reviews.length + ')') +
+        '</button></div>';
+    }
+    list.innerHTML = html;
+    var btn = document.getElementById('btn-show-more-reviews');
+    if (btn) {
+      btn.addEventListener('click', function() {
+        allReviewsExpanded = !allReviewsExpanded;
+        renderUserReviews();
+      });
+    }
+  }
+
+  /* =============================================
+     MAIN PAGE — REVIEW FORM
+     ============================================= */
+  var mainSelectedStars = 0;
+  var mainStarEls = document.querySelectorAll('#main-review-stars .star-btn');
+
+  function updateMainStars(hoverVal) {
+    mainStarEls.forEach(function(s) {
+      var val = parseInt(s.getAttribute('data-star'));
+      var active = hoverVal ? val <= hoverVal && val > mainSelectedStars : val <= mainSelectedStars;
+      s.textContent = val <= (hoverVal || mainSelectedStars) ? '★' : '☆';
+      s.classList.toggle('active', val <= mainSelectedStars);
+      s.classList.toggle('hover', active);
+    });
+  }
+
+  mainStarEls.forEach(function(el) {
+    el.addEventListener('click', function() {
+      mainSelectedStars = parseInt(this.getAttribute('data-star'));
+      updateMainStars(0);
+    });
+    el.addEventListener('mouseenter', function() {
+      updateMainStars(parseInt(this.getAttribute('data-star')));
+    });
+    el.addEventListener('mouseleave', function() {
+      updateMainStars(0);
+    });
+  });
+
+  var mainForm = document.getElementById('main-review-form');
+  if (mainForm) {
+    mainForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      var name = (document.getElementById('main-review-name').value || '').trim();
+      var tourId = document.getElementById('main-review-tour').value;
+      var text = (document.getElementById('main-review-text').value || '').trim();
+      var tourSelect = document.getElementById('main-review-tour');
+      var tourName = tourSelect.options[tourSelect.selectedIndex].text;
+
+      if (!name || !tourId || !text || !mainSelectedStars) {
+        alert('Por favor completa todos los campos y selecciona una puntuación.');
+        return;
+      }
+
+      addReviewSynced(tourId, tourName, name, mainSelectedStars, text);
+
+      mainForm.style.display = 'none';
+      document.getElementById('main-review-success').style.display = 'block';
+      renderUserReviews();
+
+      setTimeout(function() {
+        mainForm.style.display = '';
+        document.getElementById('main-review-success').style.display = 'none';
+        mainForm.reset();
+        mainSelectedStars = 0;
+        updateMainStars(0);
+      }, 3000);
+    });
+  }
+
+  renderUserReviews();
+
+})();

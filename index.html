@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="es" prefix="og: https://ogp.me/ns#">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tours Iquique - Parapente, Salitreras, Laguna Roja | Viajando Online</title>
+  <meta name="description" content="Descubre Iquique con los mejores tours: city tour, salitreras, parapente, sandboard, laguna roja, termas y más. Reserva online con Viajando Online.">
+  <meta name="keywords" content="tours iquique, parapente iquique, sandboard, salitreras, laguna roja, city tour iquique, termas chusmiza, turismo iquique">
+  <meta name="author" content="Viajando Online">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Tours Iquique - Viajando Online">
+  <meta property="og:description" content="Descubre Iquique con los mejores tours: salitreras, parapente, sandboard, laguna roja y más.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://viajandoonline.cl">
+  <meta property="og:image" content="img/tours/salitreras.jpeg">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?t=1785800000">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <link rel="preload" as="image" href="img/tours/salitreras.jpeg" fetchpriority="high">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header" role="banner">
+    <div class="container">
+      <a href="#" class="logo" aria-label="Viajando Online inicio">
+        <img src="img/logo/logo-whatsapp.jpeg" alt="Viajando Online" class="logo-img">
+        <span class="logo-text">Viajando <span>Online</span></span>
+      </a>
+      <button class="menu-toggle" aria-label="Menú de navegación" aria-expanded="false">☰</button>
+      <nav class="nav" role="navigation" aria-label="Navegación principal">
+        <a href="#tours">Tours</a>
+        <a href="#destacados">Destacados</a>
+        <a href="#porque">Por qué nosotros</a>
+        <a href="#testimonios">Testimonios</a>
+        <a href="#cotizar">Cotizar</a>
+        <a href="https://wa.me/56961470160" target="_blank" rel="noopener" class="btn-wsp">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          Reservar ahora
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" role="region" aria-label="Hero principal">
+    <div class="hero-bg" style="background-image: url('img/tours/salitreras.jpeg');"></div>
+    <div class="container">
+      <div class="hero-content">
+        <span class="hero-badge">Iquique, Norte de Chile</span>
+        <h1>Descubre los <span>tesoros</span> del Desierto y el Mar</h1>
+        <p>Explora Iquique con los mejores tours: salitreras, lagunas altiplánicas, deportes de aventura y más. Vive experiencias únicas en el Norte de Chile.</p>
+        <div class="hero-buttons">
+          <a href="#tours" class="btn-primary">Ver todos los tours</a>
+          <a href="https://wa.me/56961470160" target="_blank" rel="noopener" class="btn-outline">WhatsApp</a>
+        </div>
+        <div class="stats">
+          <div class="stat-item"><span class="stat-number">5+</span><br><span class="stat-label">Años de experiencia</span></div>
+          <div class="stat-item"><span class="stat-number">71</span><br><span class="stat-label">Tours disponibles</span></div>
+          <div class="stat-item"><span class="stat-number">5.0</span><br><span class="stat-label">Calificación</span></div>
+          <div class="stat-item"><span class="stat-number">500+</span><br><span class="stat-label">Viajeros felices</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DESTACADOS -->
+  <section class="destacados-section" id="destacados" role="region" aria-label="Tours destacados">
+    <div class="container">
+      <div class="section-title">
+        <h2>Tours <span>Destacados</span></h2>
+        <p>Las experiencias más elegidas por nuestros viajeros en Iquique</p>
+      </div>
+      <div class="destacados-grid">
+        <a href="https://wa.me/56961470160?text=Hola%2C%20quiero%20reservar%20el%20Full%20Day%20Salitreras%20%E2%80%93%20Oasis%20de%20Pica" target="_blank" rel="noopener" class="destacado-card" style="background-image: url('img/tours/salitreras.jpeg');">
+          <div class="destacado-card-content">
+            <h3>Full Day Salitreras – Oasis de Pica</h3>
+            <div class="subtitle">Patrimonio UNESCO + Oasis</div>
+            <div class="price"><span class="label">desde</span> $75.000</div>
+          </div>
+        </a>
+        <a href="https://wa.me/56961470160?text=Hola%2C%20quiero%20reservar%20el%20Tour%20Laguna%20Roja" target="_blank" rel="noopener" class="destacado-card" style="background-image: url('img/tours/laguna-roja.jpeg');">
+          <div class="destacado-card-content">
+            <h3>Tour Laguna Roja</h3>
+            <div class="subtitle">La joya secreta del altiplano chileno</div>
+            <div class="price"><span class="label">desde</span> $150.000</div>
+          </div>
+        </a>
+        <a href="https://wa.me/56961470160?text=Hola%2C%20quiero%20reservar%20Parapente%20en%20Iquique" target="_blank" rel="noopener" class="destacado-card" style="background-image: url('img/tours/parapente.jpeg');">
+          <div class="destacado-card-content">
+            <h3>Parapente en Iquique</h3>
+            <div class="subtitle">Vuela sobre el Cerro Dragón y la costa</div>
+            <div class="price"><span class="label">desde</span> $60.000</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAPA DE RUTAS -->
+  <section class="section-map" id="mapa">
+    <div class="container">
+      <div class="section-title">
+        <h2>Rutas de <span>Tours</span></h2>
+        <p>Recorridos y distancias desde Iquique</p>
+      </div>
+    </div>
+    <div id="route-map"></div>
+    <div class="container">
+      <div class="map-legend-box">
+        <div class="legend-item"><span class="ldot" style="background:#d97706"></span>Salitreras & Pica · 320 km</div>
+        <div class="legend-item"><span class="ldot" style="background:#7c3aed"></span>Volcán Isluga · 450 km</div>
+        <div class="legend-item"><span class="ldot" style="background:#dc2626"></span>Laguna Roja · 520 km</div>
+        <div class="legend-item"><span class="ldot" style="background:#2563eb"></span>Salar del Huasco · 480 km</div>
+        <div class="legend-item"><span class="ldot" style="background:#ea580c"></span>Huatacondo · 400 km</div>
+        <div class="legend-item"><span class="ldot" style="background:#059669"></span>Termas Chusmiza · 350 km</div>
+        <div class="legend-item"><span class="ldot" style="background:#9333ea"></span>Geoglifos · 180 km</div>
+        <div class="legend-item"><span class="ldot" style="background:#0891b2"></span>Pisagua · 280 km</div>
+        <div class="legend-item"><span class="ldot" style="background:#6366f1"></span>Mamiña · 300 km</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOURS -->
+  <section class="tours-section" id="tours" role="region" aria-label="Todos los tours">
+    <div class="container">
+      <div class="section-title">
+        <h2>Todos los <span>Tours</span></h2>
+        <p>Explora nuestros tours en las principales destinos de Chile</p>
+      </div>
+      <div class="tour-filters" id="tour-filters">
+        <button class="filter-btn" data-filter="Iquique">🏖️ Iquique</button>
+        <button class="filter-btn" data-filter="Arica">☀️ Arica</button>
+        <button class="filter-btn" data-filter="San Pedro de Atacama">🏜️ San Pedro</button>
+        <button class="filter-btn" data-filter="Santiago">🏔️ Santiago</button>
+        <button class="filter-btn" data-filter="Pucón">🌋 Pucón</button>
+        <button class="filter-btn" data-filter="Patagonia">🧊 Patagonia</button>
+        <button class="filter-btn" data-filter="all">Todos</button>
+      </div>
+      <div id="tours-grid" class="tours-grid"></div>
+    </div>
+  </section>
+
+  <!-- COTIZACIÓN -->
+  <section class="cotizacion-section" id="cotizar" role="region" aria-label="Cotización de tours">
+    <div class="container">
+      <div class="section-title">
+        <h2>Cotiza tu <span>próxima aventura</span></h2>
+        <p>Elige tu tour, la fecha y cuántas personas somos. Te enviaremos una cotización personalizada</p>
+      </div>
+      <div class="cotizacion-wrapper">
+        <form class="cotizacion-form" id="cotizacion-form">
+          <div class="form-group form-full">
+            <label for="cot-tour">Destino o Tour</label>
+            <select id="cot-tour" required>
+              <option value="">Selecciona un tour</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="cot-personas">N° de personas</label>
+              <select id="cot-personas" required>
+                <option value="">Selecciona</option>
+                <option value="1">1 persona</option>
+                <option value="2">2 personas</option>
+                <option value="3">3 personas</option>
+                <option value="4">4 personas</option>
+                <option value="5">5 personas</option>
+                <option value="6">6 personas</option>
+                <option value="7">7 personas</option>
+                <option value="8">8 personas</option>
+                <option value="10">10+ personas</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="cot-bebes">Bebés (gratis)</label>
+              <select id="cot-bebes">
+                <option value="0">0</option>
+                <option value="1">1 bebé</option>
+                <option value="2">2 bebés</option>
+                <option value="3">3 bebés</option>
+                <option value="4">4 bebés</option>
+                <option value="5">5 bebés</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="cot-fecha">Fecha de viaje</label>
+              <input type="date" id="cot-fecha" required>
+            </div>
+          </div>
+          <div class="form-row two">
+            <div class="form-group">
+              <label for="cot-nombre">Tu nombre</label>
+              <input type="text" id="cot-nombre" placeholder="Nombre y apellido" required>
+            </div>
+            <div class="form-group">
+              <label for="cot-telefono">Teléfono</label>
+              <input type="tel" id="cot-telefono" placeholder="+56 9 ..." required>
+            </div>
+          </div>
+          <p class="form-note">Descuento grupal: más de 5 personas restamos $10.000 por persona. Los bebés viajan gratis.</p>
+          <button type="submit" class="btn-primary btn-submit">Solicitar cotización</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- POR QUÉ NOSOTROS -->
+  <section class="features-section" id="porque" role="region" aria-label="Por qué reservar con nosotros">
+    <div class="container">
+      <div class="section-title">
+        <h2>¿Por qué <span>reservar</span> con nosotros?</h2>
+        <p>Garantizamos la mejor experiencia en el Norte de Chile</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon" aria-hidden="true">🏆</div>
+          <h3>Operadores Profesionales</h3>
+          <p>Seleccionamos los mejores guías y operadores locales certificados para asegurar una experiencia segura y auténtica.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon" aria-hidden="true">💯</div>
+          <h3>Mejor Precio Garantizado</h3>
+          <p>Te aseguramos el mejor precio del mercado. Reserva gratis y políticas flexibles de reprogramación y anulación.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon" aria-hidden="true">💬</div>
+          <h3>Atención Personalizada</h3>
+          <p>Expertos disponibles 24/7 vía WhatsApp para ayudarte en la reserva, resolver dudas y planificar tu viaje.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon" aria-hidden="true">📸</div>
+          <h3>Fotos y Video Incluidos</h3>
+          <p>Todos nuestros tours de aventura incluyen sesión de fotos y videos editados, enviados por link de descarga.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon" aria-hidden="true">🚐</div>
+          <h3>Traslado Incluido</h3>
+          <p>Recogemos y dejamos en tu alojamiento de Iquique. Viaja cómodamente en vehículos con aire acondicionado.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon" aria-hidden="true">🌿</div>
+          <h3>Turismo Sustentable</h3>
+          <p>Fomentamos el respeto por las comunidades indígenas y el cuidado del patrimonio cultural y natural de la región.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIOS + OPINIONES -->
+  <section class="testimonials-section" id="testimonios" role="region" aria-label="Testimonios de viajeros">
+    <div class="container">
+      <div class="section-title">
+        <h2>Lo que dicen <span>nuestros viajeros</span></h2>
+        <p>Opiniones reales de quienes ya vivieron la experiencia</p>
+      </div>
+
+      <!-- FORMULARIO DE OPINIONES -->
+      <div class="review-form-section" id="dejar-opinion">
+        <div class="review-form-wrapper">
+          <h3>Deja tu opinión</h3>
+          <p class="review-form-subtitle">¿Visitaste Iquique con nosotros? Cuéntanos tu experiencia</p>
+          <form class="review-main-form" id="main-review-form">
+            <div class="review-field">
+              <label for="main-review-name">Tu nombre</label>
+              <input type="text" id="main-review-name" placeholder="Ej: María González" maxlength="40" required>
+            </div>
+            <div class="review-field">
+              <label for="main-review-tour">Tour que visitaste</label>
+              <select id="main-review-tour" required>
+                <option value="">Selecciona el tour</option>
+                <option value="city-tour">City Tour Iquique</option>
+                <option value="salitreras-oasis">Salitreras & Oasis de Pica</option>
+                <option value="parque-isluga">Parque Nacional Volcán Isluga</option>
+                <option value="laguna-roja">Laguna Roja</option>
+                <option value="salar-huasco">Salar del Huasco</option>
+                <option value="huatacondo">Huatacondo</option>
+                <option value="termas-mamina">Tour Mamiña</option>
+                <option value="salitreras">Salitreras Humberstone</option>
+                <option value="pisagua">Tour Pisagua</option>
+                <option value="geoglifos">Geoglifos de Pintados</option>
+                <option value="termas-chusmiza">Termas Chusmiza</option>
+                <option value="sandboard">Sandboard</option>
+                <option value="parapente">Parapente</option>
+                <option value="buceo">Buceo</option>
+                <option value="city-tour-arica">City Tour Arica</option>
+                <option value="city-tour-tacna">City Tour Tacna</option>
+                <option value="valle-codpa">Valle de Codpa</option>
+                <option value="lago-chungara">Lago Chungará</option>
+                <option value="oasis-pica-matilla">Oasis de Pica & Matilla</option>
+                <option value="laguna-cejar">Laguna Cejar</option>
+                <option value="valle-de-la-luna">Valle de la Luna</option>
+                <option value="termas-puritama">Termas de Puritama</option>
+                <option value="termas-purilibre">Termas de Purilibre</option>
+                <option value="valle-del-arcoiris">Valle del Arcoíris</option>
+                <option value="piedras-rojas">Mirador Piedras Rojas</option>
+                <option value="ruta-de-los-salares">Ruta de los Salares</option>
+                <option value="tour-astronomico">Tour Astronómico</option>
+                <option value="vallecito">Tour Vallecito</option>
+                <option value="laguna-baltinache">Laguna Escondida de Baltinache</option>
+                <option value="geiser-del-tatio">Géiser del Tatio</option>
+                <option value="city-tour-santiago">City Tour Santiago</option>
+                <option value="vina-valparaiso">Viña del Mar & Valparaíso</option>
+                <option value="isla-negra-algarrobo">Isla Negra, Algarrobo + Viñedo</option>
+                <option value="parque-safari">Parque Safari</option>
+                <option value="pacifico-mar-tierra">Pacífico Mar y Tierra</option>
+                <option value="panoramico-sunset">Panorámico Sunset</option>
+                <option value="andes-panoramico">Andes Panorámico</option>
+                <option value="valle-nevado">Valle Nevado</option>
+                <option value="el-colorado">El Colorado</option>
+                <option value="parque-farellones">Parque Farellones</option>
+                <option value="portillo-laguna-inca">Portillo y Laguna del Inca</option>
+                <option value="cajon-maipo-embalse-yeso">Cajón del Maipo: Embalse El Yeso</option>
+                <option value="cajon-maipo-termas-colina">Cajón del Maipo: Termas de Colina</option>
+                <option value="aventura-cuatrimoto">Aventura en Cuatrimoto</option>
+                <option value="atardecer-andes-dj">Atardecer en los Andes con DJ</option>
+                <option value="spa-el-morado">Spa El Morado</option>
+                <option value="vina-santa-rita">Viña Santa Rita</option>
+                <option value="undurraga">Undurraga</option>
+                <option value="vina-alyan-sunset">Viña Sunset Alyan</option>
+                <option value="vina-alyan">Viña Alyan</option>
+                <option value="cousino-macul-bahai">Cousiño Macul & Templo Bahá'í</option>
+                <option value="cousino-macul-bahai-experiencia">Cousiño Macul & Bahá'í Experiencia</option>
+                <option value="concha-y-toro-premium">Concha y Toro Premium</option>
+                <option value="concha-y-toro-marques">Concha y Toro Marqués</option>
+                <option value="concha-y-toro-nocturna">Concha y Toro Nocturna</option>
+                <option value="vina-tarapaca">Viña Tarapacá</option>
+                <option value="wine-experience-bosque-emiliana">Wine Experience Casas del Bosque</option>
+                <option value="pucon-caburgua">Pucón y Caburga</option>
+                <option value="termas-geometricas">Termas Geométricas</option>
+                <option value="huilo-huilo">Huilo Huilo</option>
+                <option value="torres-paine-milodon">Torres del Paine y Cuevas del Milodón</option>
+                <option value="pinguino-rey">Pingüino Rey</option>
+                <option value="fuerte-bulnes">Fuerte Bulnes</option>
+                <option value="city-tour-punta-arenas">City Tour Punta Arenas</option>
+                <option value="navegacion-glaciar-grey">Navegación Glaciar Grey</option>
+                <option value="trekking-base-torres">Trekking Base Torres</option>
+                <option value="trekking-faro-san-isidro">Trekking Faro San Isidro</option>
+                <option value="trekking-pali-aike">Trekking Pali Aike</option>
+                <option value="trekking-reserva-magallanes">Trekking Reserva Magallanes</option>
+                <option value="navegacion-balmaceda-serrano">Navegación Balmaceda y Serrano</option>
+                <option value="navegacion-isla-magdalena">Navegación Isla Magdalena</option>
+              </select>
+            </div>
+            <div class="review-field">
+              <label>Tu puntuación</label>
+              <div class="review-stars-input" id="main-review-stars">
+                <span class="star-btn" data-star="1">☆</span>
+                <span class="star-btn" data-star="2">☆</span>
+                <span class="star-btn" data-star="3">☆</span>
+                <span class="star-btn" data-star="4">☆</span>
+                <span class="star-btn" data-star="5">☆</span>
+              </div>
+            </div>
+            <div class="review-field">
+              <label for="main-review-text">Tu opinión</label>
+              <textarea id="main-review-text" placeholder="Cuéntanos cómo fue tu experiencia, qué te gustó más, si lo recomendarías..." maxlength="500" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="review-submit-btn">Enviar mi opinión</button>
+          </form>
+          <div id="main-review-success" style="display:none;" class="review-success-msg">
+            ¡Gracias por tu opinión! Tu reseña ayudará a otros viajeros.
+          </div>
+        </div>
+      </div>
+
+      <!-- OPINIONES EN GRID -->
+      <div class="testimonials-grid" id="user-reviews-list"></div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section" role="region" aria-label="Llamado a la acción">
+    <div class="container">
+      <h2>¿Listo para tu próxima <br>aventura en Iquique?</h2>
+      <p>Reserva directo con nosotros por WhatsApp y asegura tu cupo.</p>
+      <a href="https://wa.me/56961470160?text=Hola%2C%20quiero%20reservar%20un%20tour%20en%20Iquique" target="_blank" rel="noopener" class="btn-primary">
+        Reserva ahora por WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- GALERÍA -->
+  <section class="gallery-section" id="galeria" role="region" aria-label="Galería de fotos">
+    <div class="container">
+      <div class="section-title">
+        <h2>Momentos de <span>nuestros viajeros</span></h2>
+        <p>Las mejores fotos capturadas en medio de la aventura</p>
+      </div>
+      <div class="gallery-grid" id="gallery-grid">
+        <div class="gallery-item" style="background-image:url('img/tours/salitreras.jpeg')"></div>
+        <div class="gallery-item" style="background-image:url('img/tours/laguna-roja.jpeg')"></div>
+        <div class="gallery-item" style="background-image:url('img/tours/sandboard.png')"></div>
+        <div class="gallery-item" style="background-image:url('img/tours/parapente.jpeg')"></div>
+        <div class="gallery-item" style="background-image:url('img/tours/salar-huasco.jpeg')"></div>
+        <div class="gallery-item" style="background-image:url('img/tours/termas-chusmiza.jpeg')"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Viajando Online</h4>
+          <ul>
+            <li><a href="#tours">Tours en Iquique</a></li>
+            <li><a href="#destacados">Destacados</a></li>
+            <li><a href="#testimonios">Testimonios</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contacto</h4>
+          <ul>
+            <li><a href="https://wa.me/56961470160" target="_blank" rel="noopener">WhatsApp: +56 9 6147 0160</a></li>
+            <li><a href="mailto:contacto@viajandoonline.cl">Email: contacto@viajandoonline.cl</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Síguenos</h4>
+          <ul>
+            <li><a href="https://www.instagram.com/viajandoonline.cl" target="_blank" rel="noopener">Instagram</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Política de cancelación</h4>
+          <ul>
+            <li>Reembolso completo con 3 días de anticipación</li>
+            <li>Reprogramación gratuita hasta 24 hrs antes</li>
+            <li>No Show sin derecho a devolución</li>
+          </ul>
+        </div>
+        <div>
+          <h4>DESARROLLADO POR</h4>
+          <div style="width:32px;height:3px;background:#f59e0b;border-radius:2px;margin-bottom:16px;"></div>
+          <div style="font-size:16px;font-weight:700;color:#fff;margin-bottom:4px;">CloudSolutions</div>
+          <div style="font-size:13px;color:rgba(255,255,255,0.5);font-style:italic;margin-bottom:12px;">Soluciones web a medida</div>
+          <a href="https://cloudsolutions.cl/" target="_blank" rel="noopener" style="display:inline-flex;width:40px;height:40px;border-radius:8px;background:rgba(255,255,255,0.08);align-items:center;justify-content:center;border:1px solid rgba(255,255,255,0.15);text-decoration:none;transition:all 0.3s ease;" onmouseover="this.style.background='rgba(6,182,212,0.2)';this.style.borderColor='rgba(6,182,212,0.4)'" onmouseout="this.style.background='rgba(255,255,255,0.08)';this.style.borderColor='rgba(255,255,255,0.15)'">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Viajando Online. Todos los derechos reservados.</p>
+        <a href="terminos.html">Términos y Condiciones</a>
+      </div>
+      <div class="trust-badges">
+        <div class="trust-badge">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <div><strong>Sitio Seguro</strong><span>Compra protegida</span></div>
+        </div>
+        <div class="trust-badge">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <div><strong>Guías Certificados</strong><span>Operadores locales</span></div>
+        </div>
+        <div class="trust-badge">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <div><strong>Calificación 5.0</strong><span>Reseñas verificadas</span></div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/main-v2.js?t=1785800000"></script>
+  <script>
+  window.addEventListener('load',function(){
+    if(!document.getElementById('route-map'))return;
+    var m=L.map('route-map',{scrollWheelZoom:false}).setView([-20.05,-69.7],9);
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:18}).addTo(m);
+
+    var iq=[-20.2134,-70.1502];
+    var si=L.divIcon({className:'',html:'<div style="background:#1e293b;width:26px;height:26px;border-radius:50%;border:3px solid #fff;box-shadow:0 2px 8px rgba(0,0,0,.4);display:flex;align-items:center;justify-content:center"><div style="width:10px;height:10px;background:#22c55e;border-radius:50%"></div></div>',iconSize:[26,26],iconAnchor:[13,13]});
+    L.marker(iq,{icon:si}).addTo(m).bindPopup('<b>📍 Iquique</b><br>Punto de partida');
+
+    var tours=[
+      {c:'#d97706',n:'Salitreras & Pica',d:'320 km',w:[iq,[-20.207,-70.065],[-20.267,-69.783],[-20.488,-69.727]]},
+      {c:'#7c3aed',n:'Volcán Isluga',d:'450 km',w:[iq,[-20.267,-69.783],[-19.967,-69.517],[-19.633,-69.267]]},
+      {c:'#dc2626',n:'Laguna Roja',d:'520 km',w:[iq,[-19.55,-69.45],[-18.85,-69.217]]},
+      {c:'#2563eb',n:'Salar del Huasco',d:'480 km',w:[iq,[-20.488,-69.727],[-20.333,-69.333]]},
+      {c:'#ea580c',n:'Huatacondo',d:'400 km',w:[iq,[-20.267,-69.783],[-19.917,-69.500]]},
+      {c:'#059669',n:'Termas Chusmiza',d:'350 km',w:[iq,[-20.267,-69.783],[-19.967,-69.517],[-19.85,-69.45]]},
+      {c:'#9333ea',n:'Geoglifos',d:'180 km',w:[iq,[-20.267,-69.783],[-20.467,-69.833]]},
+      {c:'#0891b2',n:'Pisagua',d:'280 km',w:[iq,[-19.583,-70.217]]},
+      {c:'#6366f1',n:'Mamiña',d:'300 km',w:[iq,[-20.267,-69.783],[-19.917,-69.367]]}
+    ];
+
+    tours.forEach(function(t){
+      var pl=L.polyline(t.w,{color:t.c,weight:3.5,opacity:.7}).addTo(m);
+      var last=t.w[t.w.length-1];
+      var ei=L.divIcon({className:'',html:'<div style="background:'+t.c+';width:20px;height:20px;border-radius:50%;border:3px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.3)"></div>',iconSize:[20,20],iconAnchor:[10,10]});
+      L.marker(last,{icon:ei}).addTo(m).bindPopup('<b style="color:'+t.c+'">'+t.n+'</b><br>'+t.d);
+
+      var coords=t.w.map(function(p){return p[1]+','+p[0];}).join(';');
+      fetch('https://router.project-osrm.org/route/v1/driving/'+coords+'?overview=full&geometries=geojson')
+        .then(function(r){return r.json();})
+        .then(function(data){
+          if(data.code==='Ok'&&data.routes[0]){
+            var pts=data.routes[0].geometry.coordinates.map(function(c){return[c[1],c[0]];});
+            pl.setLatLngs(pts);
+          }
+        })['catch'](function(){});
+    });
+
+    setTimeout(function(){m.invalidateSize();},300);
+  });
+  </script>
+</body>
+</html>
